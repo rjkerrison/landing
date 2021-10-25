@@ -35,6 +35,7 @@ header nav,
 header h1 {
   flex-basis: 50%;
   width: 100%;
+  margin: 0;
 }
 
 nav ul {
