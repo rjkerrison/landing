@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Raleway', serif;
-  padding: 0;
+  padding: 2rem 0 0;
   margin: 0;
 }
 
@@ -21,40 +21,6 @@ h6 {
 
 p {
   line-height: 1.5;
-}
-
-header {
-  padding: 1rem 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: column;
-}
-
-header nav,
-header h1 {
-  flex-basis: 50%;
-  width: 100%;
-  margin: 0;
-}
-
-nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 1.5rem;
-}
-
-nav ul a {
-  color: rgb(187, 122, 0);
-  text-decoration: none;
-}
-
-nav ul a:hover {
-  color: rgb(232, 165, 41);
 }
 
 section {
@@ -98,9 +64,6 @@ section:nth-of-type(odd) a:hover {
   section .section-inner {
     grid-template-columns: repeat(2, 1fr);
   }
-  header {
-    flex-direction: row;
-  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -110,7 +73,6 @@ section:nth-of-type(odd) a:hover {
     margin: 0 auto;
   }
 
-  header,
   section h2,
   section .section-inner {
     max-width: 1500px;

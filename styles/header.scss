@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Raleway:wght@400;700&display=swap');
+
+header#rjk-shared-header {
+  font-family: 'Raleway', sans-serif;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  background: white;
+  color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-align: left;
+  }
+
+  p {
+    text-align: left;
+    line-height: 1.5;
+    font-size: 2rem;
+  }
+  nav,
+  h1,
+  p {
+    flex-basis: 50%;
+    width: 100%;
+    margin: 0;
+  }
+
+  nav {
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.5rem;
+      a {
+        color: rgb(187, 122, 0);
+        text-decoration: none;
+        &:hover {
+          color: rgb(232, 165, 41);
+        }
+      }
+    }
+  }
+
+  .inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+    }
+    @media screen and (min-width: 1200px) {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  }
+}
+
+body {
+  padding-top: 2rem;
+}
