@@ -4,6 +4,12 @@ const links = [
   ['/ticker-board', 'Ticker Board'],
 ]
 
+if (window.language === 'fr') {
+  links[0][1] = 'Accueil'
+  links[1][1] = "Cahier d'exercises"
+  links[2][1] = 'Afficheur à palettes'
+}
+
 const createNav = () => {
   const nav = document.createElement('nav')
   const ul = document.createElement('ul')
