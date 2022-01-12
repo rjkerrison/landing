@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Raleway:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', serif;
+  padding: 2rem 0 0;
+  text-align: center;
+  margin: 5rem 0 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Raleway', sans-serif;
+}
+
+p {
+  line-height: 1.5;
+}
+
+section {
+  padding: 5rem 2rem 10rem;
+  font-size: 1.5rem;
+  color: black;
+  margin: 0 auto;
+  position: relative;
+}
+
+section header {
+  position: absolute;
+  top: -2.5rem;
+  left: 20%;
+  padding: 0.5rem;
+  width: min-content;
+}
+
+section header h2 {
+  font-size: 2.5rem;
+}
+
+section header .byline {
+  text-align: left;
+  margin: 0;
+}
+
+section .section-inner {
+  text-align: left;
+  gap: 5rem;
+}
+
+section:nth-of-type(even),
+section:nth-of-type(even) header {
+  background-color: rgb(171, 222, 198);
+}
+
+section:nth-of-type(odd),
+section:nth-of-type(odd) header {
+  background-color: rgb(235, 225, 167);
+}
+
+section:nth-of-type(even) a {
+  color: rgb(187, 122, 0);
+}
+
+section:nth-of-type(even) a:hover {
+  color: rgb(232, 165, 41);
+}
+
+section:nth-of-type(odd) a {
+  color: rgb(226, 147, 0);
+}
+
+section:nth-of-type(odd) a:hover {
+  color: rgb(252, 215, 147);
+}
+
+@media screen and (min-width: 768px) {
+  section .section-inner {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  section .section-inner {
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 1500px;
+    margin: 0 auto;
+  }
+
+  section h2,
+  section .section-inner {
+    width: max-content;
+    margin: 0 auto;
+  }
+}
