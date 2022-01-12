@@ -1,12 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Raleway:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap');
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Raleway', serif;
-  padding: 2rem 0 0;
+  padding: 3rem 0 0;
   text-align: center;
   margin: 5rem 0 0;
 }
@@ -16,8 +15,9 @@ h2,
 h3,
 h4,
 h5,
-h6 {
-  font-family: 'Raleway', sans-serif;
+h6,
+body {
+  font-family: 'Cormorant Garamond', 'Garamond', 'Baskerville', sans-serif;
 }
 
 p {
@@ -25,7 +25,7 @@ p {
 }
 
 section {
-  padding: 5rem 2rem 10rem;
+  padding: 2rem 1rem 10rem;
   font-size: 1.5rem;
   color: black;
   margin: 0 auto;
@@ -35,18 +35,24 @@ section {
 section header {
   position: absolute;
   top: -2.5rem;
-  left: 20%;
-  padding: 0.5rem;
-  width: min-content;
+  padding: 0.25rem;
+  text-align: left;
+  max-width: max-content;
+}
+
+section,
+section header {
+  box-shadow: 0 -0.5rem 1.5rem -2rem black;
 }
 
 section header h2 {
   font-size: 2.5rem;
+  margin: 0;
 }
 
 section header .byline {
-  text-align: left;
   margin: 0;
+  width: max-content;
 }
 
 section .section-inner {
@@ -54,14 +60,36 @@ section .section-inner {
   gap: 5rem;
 }
 
+header {
+  position: fixed;
+  top: 0;
+  padding: 1rem;
+  z-index: 1;
+  width: 100%;
+}
+header h1 {
+  margin: 0;
+}
+
+main header {
+  z-index: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body,
+header,
 section:nth-of-type(even),
 section:nth-of-type(even) header {
-  background-color: rgb(171, 222, 198);
+  background-color: hsl(60, 53%, 89%);
 }
 
 section:nth-of-type(odd),
 section:nth-of-type(odd) header {
-  background-color: rgb(235, 225, 167);
+  background-color: hsl(20, 53%, 89%);
 }
 
 section:nth-of-type(even) a {
@@ -80,7 +108,21 @@ section:nth-of-type(odd) a:hover {
   color: rgb(252, 215, 147);
 }
 
+.byline {
+  font-style: italic;
+}
+
+.line {
+  display: inline-block;
+  text-indent: -2rem;
+  padding-left: 2rem;
+}
+
 @media screen and (min-width: 768px) {
+  body {
+    padding: 2rem 0 0;
+  }
+
   section .section-inner {
     grid-template-columns: repeat(1, 1fr);
   }
