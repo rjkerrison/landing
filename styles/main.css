@@ -24,7 +24,7 @@ p {
 }
 
 section {
-  padding: 2rem;
+  padding: 6rem 2rem 4rem;
   font-size: 1.5rem;
 }
 
@@ -58,6 +58,25 @@ section:nth-of-type(odd) a {
 
 section:nth-of-type(odd) a:hover {
   color: rgb(252, 215, 147);
+}
+
+h2 {
+  position: relative;
+}
+
+a[href^='#'] {
+  text-decoration: none;
+}
+
+a[href^='#']:hover {
+  text-decoration: underline;
+  text-decoration-line: blue;
+}
+
+a[href^='#']:hover::before {
+  content: '#';
+  position: absolute;
+  left: -2rem;
 }
 
 @media screen and (min-width: 768px) {
